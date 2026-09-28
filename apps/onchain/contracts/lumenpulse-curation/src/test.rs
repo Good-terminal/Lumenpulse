@@ -8,7 +8,7 @@ use soroban_sdk::{
     Address, Env, String,
 };
 
-fn setup<'a>(env: &Env) -> (CommunityCurationContractClient<'a>, Address, Address) {
+fn setup(env: &Env) -> (CommunityCurationContractClient<'_>, Address, Address) {
     let admin = Address::generate(env);
     let proposer = Address::generate(env);
     let contributor_registry = Address::generate(env);
